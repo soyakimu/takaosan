@@ -1,19 +1,29 @@
 //変数設定
 $wrapper-body-width: 1080px;
+$section-body-margin-sm: 0 3%;
 $header-logo-width: 208px;
+$header-logo-sm-width: 187px;
 
 $color-black: #454545;
 $color-light-gray: #fafafa;
+$color-light-gray2: #eeeeee;
 $color-gray: #575757;
 $color-green: #9aaf24;
 $color-light-green: #c9e23f;
 
 $font-set-01: 'Montserrat', sans-serif;
 
+$breakpoint-md: 768px;
+
 //wrapper
 .wrapper {
     width: $wrapper-body-width;
     margin: 0 auto;
+}
+@media (max-width: $breakpoint-md) {
+    .wrapper {
+        width: 100%;
+    }
 }
 //共通
 body {
@@ -82,14 +92,45 @@ header {
                 }
             }
         }
-        
+    }
+    .toggle-button {
+        display: none;
+    }
+}
+@media (max-width: $breakpoint-md) {
+    header {
+        margin-bottom: 66px;
+        .site-header-wrap {
+            position: relative;
+            .site-logo {
+                width: $header-logo-sm-width;
+                padding: 20px 0 22px 17px;
+            }
+            .toggle-button {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+        .main-visual {
+            .catchcopy {
+                width: 121px;
+                position: absolute;
+                top: 26px;
+                right: 15px;
+            }
+        }
+        .global-nav {
+            display: none;
+        }
     }
 }
 
 //news-area
 .news-area {
     background-color: $color-light-gray;
-    border: 1px solid lightgray;
+    border: 1px solid $color-light-gray2;
     .news-area-wrapper {
         width: 720px;
         margin: 70px auto;
@@ -121,6 +162,51 @@ header {
                     text-justify: inter-ideograph;
                 }
             }
+        }
+    }
+}
+@media (max-width: $breakpoint-md) {
+    .news-area {
+        margin: $section-body-margin-sm;
+        .site-logo {
+            width: $header-logo-sm-width;
+            padding: 20px 0 22px 17px;
+        }
+        .main-visual {
+            .catchcopy {
+                width: 121px;
+                position: absolute;
+                top: 26px;
+                right: 15px;
+            }
+        }
+        .global-nav {
+            display: none;
+        }
+        .news-area-wrapper {
+            width: 90%;
+            padding: 44px 25px;
+            .news-list {
+                .news-item {
+                    display: block;
+                    width: 100%;
+                    span {
+                        font-size: 12px;
+                        width: 113px;
+                        height: 26px;
+                        line-height: 26px;
+                    }
+                    a {
+                        line-height: 28px;
+                        color: $color-black;
+                        text-align: justify;
+                        text-justify: inter-ideograph;
+                        width: none;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+
         }
     }
 }
@@ -176,13 +262,14 @@ header {
             box-shadow: 0px 7px 20px rgba(0,0,0,0.15);
             border: 4px solid $color-light-green;
             width: 344px;
+            transition: all 0.2s ease-in;
             a {
                 text-decoration: none;
                 color: $color-black;
                 text-align: center;
-                transition:background-color 3.0s;
+                // transition:background-color 3.0s;
                 // transition: all 0.3s ease-in;
-                // transition: all 0.5s ease-in;
+                transition: all 0.5s ease-in;
                 .card-img {
                     width: 100%;
                     margin-bottom: 35px;
@@ -222,12 +309,16 @@ header {
                     transition: all 0.5s ease-in;
                 }
                 &:hover {
+                    transform: translate3d(0,5px, 0);
                     button {
-                        transition: all 0.5s ease-in;
+                        // transition: all 0.5s ease-in;
                         background: rgb(199,226,65);
                         background: linear-gradient(90deg, rgba(199,226,65,1) 0%, rgba(71,227,219,1) 100%);
                     }
                 }
+            }
+            &:hover {
+                transform: translate3d(0,-5px, 0);
             }
         }
     }
@@ -244,9 +335,15 @@ header {
         flex-wrap: wrap;
         // vertical-align: bottom;
         .items-item {
-            // vertical-align: bottom;
-            .items-img {
-                vertical-align: bottom;
+            a {
+                .items-img {
+                    transition: all 0.3s ease-in;
+                    vertical-align: bottom;
+                    &:hover {
+                            transition: all 0.5 ease-in;
+                            opacity: 0.5;
+                    }
+                }
             }
         }
     }
