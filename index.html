@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAKAOSAN</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p|Montserrat:700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/rest.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/jquery-3.4.1.min.js"></script>
@@ -17,22 +18,22 @@
         <header>
 
             <h1>
-                <img src="./assets/img/logo.svg" alt="TAKAOSAN">
+                <img class="site-logo" src="./assets/img/logo.svg" alt="TAKAOSAN">
             </h1>
 
             <div class="main-visual">
-                <img src="./assets/img/mainimage1.png" alt="山を見下ろす後ろ姿の男性">
-                <img src="./assets/img/catchcopy.png" alt="キャッチコピー">
+                <img class="main-visual-img" src="./assets/img/mainimage1.png" alt="山を見下ろす後ろ姿の男性">
+                <img class="catchcopy" src="./assets/img/catchcopy.png" alt="キャッチコピー">
             </div>
 
-            <nav id="global-nav">
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
-                    <li><a href="#">SHOP</a></li>
-                    <li><a href="#">ACCESS</a></li>
-                    <li><a href="#">BLOG</a></li>
-                    <li><a href="#">CONTACT</a></li>
+            <nav class="global-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#">HOME</a></li>
+                    <li class="nav-item"><a href="#">ABOUT</a></li>
+                    <li class="nav-item"><a href="#">SHOP</a></li>
+                    <li class="nav-item"><a href="#">ACCESS</a></li>
+                    <li class="nav-item"><a href="#">BLOG</a></li>
+                    <li class="nav-item"><a href="#">CONTACT</a></li>
                 </ul>
             </nav>
 
@@ -42,101 +43,140 @@
 
 
             <section class="news-area">
+                <div class="news-area-wrapper">
 
-                <h2>NEWS</h2>
+                    <div class="section-title-wrap">
+                        <h2 class="section-title">NEWS</h2>
+                    </div>
 
-                <ul>
-                    <li>
-                        <span>2018.12.17</span>
-                        <a href="">TAKAOSANオリジナルハードシェルを限定販売いたしました。</a>
-                    </li>
-                    <li>
-                        <span>2018.11.09</span>
-                        <a href="">PFCフリー撥水剤プレゼントキャンペーン実施中</a>
-                    </li>
-                    <li>
-                        <span>2018.06.30</span>
-                        <a href="">家族参加型 雪上運動会 & 山ガールコラボレーションツアーのご案内。</a>
-                    </li>
-                    <li>
-                        <span>2015.11.29</span>
-                        <a href="">TAKAOSANオンラインショップがオープンしました。オンラインクーポンを期間限定で配布中。お見逃なく！</a>
-                    </li>
-                </ul>
+                    <ul class="news-list">
+                        <li class="news-item">
+                            <span>2018.12.17</span>
+                            <a href="#">TAKAOSANオリジナルハードシェルを限定販売いたしました。</a>
+                        </li>
+                        <li class="news-item">
+                            <span>2018.11.09</span>
+                            <a href="#">PFCフリー撥水剤プレゼントキャンペーン実施中</a>
+                        </li>
+                        <li class="news-item">
+                            <span>2018.06.30</span>
+                            <a href="#">家族参加型 雪上運動会 & 山ガールコラボレーションツアーのご案内。</a>
+                        </li>
+                        <li class="news-item">
+                            <span>2015.11.29</span>
+                            <a href="#">TAKAOSANオンラインショップがオープンしました。オンラインクーポンを期間限定で配布中。お見逃なく！</a>
+                        </li>
+                    </ul>
 
+                </div>
             </section><!-- .news-area -->
 
 
             <section class="features-area">
 
-                <h2>FEATURES</h2>
+                <div class="section-title-wrap">
+                    <h2 class="section-title">FEATURES</h2>
+                </div>
 
-                
-                <p><img src="./assets/img/features-image.jpg" alt="防水着を着て山を見下ろす男性"></p>
-                <h3>アウトドアシーンを想定された防水性</h3>
-                <p>TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」やTAKAOSANが開発したものです。また、一番人気といわれる「Aero888」をはじめとしたバックパックでは、表生地に"バリスティックナイロン"という強度のある撥水ナイロンを使用し、裏地にもハイパロンという耐性ゴムを使用。表と裏のWの防水で、アウトドアシーンや普段の急な雨でも安心です。
-                </p>
+
+                <div class="box-wrap">
+
+                    <p><img class="box-img" src="./assets/img/features-image.jpg" alt="防水着を着て山を見下ろす男性"></p>
+                    <div class="box-content">
+
+                        <h3 class="box-title">アウトドアシーンを想定された防水性</h3>
+                        <p class="box-text">
+                            TAKAOSANのハードウェアは、最高の素材や最高の技術・革新的なデザインを追求し続けるその姿勢から、「コストパフォーマンスという言葉は存在しない」と言い切るほど、品質に徹底的にこだわるブランド。今では各メーカーで当たり前になっている「止水ジッパー」やTAKAOSANが開発したものです。
+                            <br>
+                            <br>
+                            また、一番人気といわれる「Aero888」をはじめとしたバックパックでは、表生地に"バリスティックナイロン"という強度のある撥水ナイロンを使用し、裏地にもハイパロンという耐性ゴムを使用。表と裏のWの防水で、アウトドアシーンや普段の急な雨でも安心です。
+                        </p>
+                    </div><!-- .box-content -->
+                </div><!-- .box-wrap -->
 
             </section><!-- .features-area -->
 
 
             <section class="subscription-area">
 
-                <h2>SUBSCRIPTION</h2>
-                <p>TAKAOSANオススメの商品を毎月お客様のもとにお送りする定額サービスを実施しております。初月無料なので、安心して始めることが出来ます。</p>
-
-                <div class="card">
-                    <P><img src="./assets/img/subscription-starter-image.jpg" alt="Starterのイメージ画像"></P>
-                    <h3>Starter</h3>
-                    <p><span>¥2,400/m</span>気軽に始められるスタータープラン</p>
-                    <a class="btn" href="">詳しくはこちら</a>
+                <div class="section-title-wrap">
+                    <h2 class="section-title">SUBSCRIPTION</h2>
+                </div>
+                <div class="section-description-wrap">
+                    <p class="section-description">TAKAOSANオススメの商品を毎月お客様のもとにお送りする定額サービスを実施しております。初月無料なので、安心して始めることが出来ます。
+                    </p>
                 </div>
 
-                <div class="card">
-                    <p><img src="./assets/img/subscription-standard-image.jpg" alt="Standardのイメージ画像"></p>
-                    <h3>Standard</h3>
-                    <p><span>¥7,800/m</span>当店オススメのスタンダードパック</p>
-                    <a class="btn" href="">詳しくはこちら</a>
-                </div>
+                <div class="card-list">
 
-                <div class="card">
-                    <p><img src="./assets/img/subscription-master-image.jpg" alt="Masterのイメージ画像"></p>
-                    <h3>Master</h3>
-                    <p><span>¥16,400/m</span>ハイブランドを毎月お届けします</p>
-                    <a class="btn" href="">詳しくはこちら</a>
-                </div>
+                    <div class="card">
+                        <a href="#">
+                            <P class="card-img-wrap"><img class="card-img"
+                                    src="./assets/img/subscription-starter-image.jpg" alt="Starterのイメージ画像"></P>
+                            <h3 class="card-title">Starter</h3>
+                            <p class="card-content"><span>¥</span>2,400<span>/m</span></p>
+                            <p>気軽に始められるスタータープラン</p>
+                            <button>詳しくはこちら</button>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="#">
+                            <p class="card-img-wrap"><img class="card-img"
+                                    src="./assets/img/subscription-standard-image.jpg" alt="Standardのイメージ画像"></p>
+                            <h3 class="card-title">Standard</h3>
+                            <p class="card-content"><span>¥</span>7,800<span>/m</span></p>
+                            <p>当店オススメのスタンダードパック</p>
+                            <button>詳しくはこちら</button>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="#">
+                            <p class="card-img-wrap"><img class="card-img"
+                                    src="./assets/img/subscription-master-image.jpg" alt="Masterのイメージ画像"></p>
+                            <h3 class="card-title">Master</h3>
+                            <p class="card-content"><span>¥</span>16,400<span>/m</span></p>
+                            <p>ハイブランドを毎月お届けします</p>
+                            <button>詳しくはこちら</button>
+                        </a>
+                    </div>
+
+                </div><!-- .card-list -->
 
             </section><!-- .subscription-area -->
 
 
             <section class="items-area">
 
-                <h2>ITEMS</h2>
+                <div class="section-title-wrap">
+                    <h2 class="section-title">ITEMS</h2>
+                </div>
 
-                <ul>
-                    <li><a href=""><img src="./assets/img/items-image01.png" alt="アイテム画像01"></a>
+                <ul class="items-list">
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image01.png" alt="アイテム画像01"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image02.png" alt="アイテム画像02"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image02.png" alt="アイテム画像02"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image03.png" alt="アイテム画像03"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image03.png" alt="アイテム画像03"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image04.png" alt="アイテム画像04"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image04.png" alt="アイテム画像04"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image05.png" alt="アイテム画像05"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image05.png" alt="アイテム画像05"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image06.png" alt="アイテム画像06"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image06.png" alt="アイテム画像06"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image07.png" alt="アイテム画像07"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image07.png" alt="アイテム画像07"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image08.png" alt="アイテム画像08"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image08.png" alt="アイテム画像08"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image09.png" alt="アイテム画像09"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image09.png" alt="アイテム画像09"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image10.png" alt="アイテム画像10"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image10.png" alt="アイテム画像10"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image11.png" alt="アイテム画像11"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image11.png" alt="アイテム画像11"></a>
                     </li>
-                    <li><a href=""><img src="./assets/img/items-image12.png" alt="アイテム画像12"></a>
+                    <li class="items-item"><a href="#"><img class="items-img" src="./assets/img/items-image12.png" alt="アイテム画像12"></a>
                     </li>
                 </ul>
 
@@ -144,8 +184,8 @@
 
         </main>
 
-        <footer>
-            <small>COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.</small>
+        <footer class="footer">
+            <small class="footer-text">COPYRIGHT TAKAOSAN ALL RIGHT RESERVED.</small>
         </footer>
 
     </div><!-- .wrapper -->
