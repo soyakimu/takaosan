@@ -1,21 +1,36 @@
-//変数設定
+/**
+* style.scss
+* TAKAOSANのスタイルシート
+* @author YUKIYA KIMURA
+* @version 1.0
+*/
+
+
+/*
+変数設定
+*/
+//幅
 $wrapper-body-width: 1080px;
 $section-body-width-sm: 94vw;
 $section-body-margin-sm: 0 3%;
 $header-logo-width: 208px;
 $header-logo-sm-width: 187px;
-
+//色
 $color-black: #454545;
+$color-gray: #575757;
 $color-light-gray: #fafafa;
 $color-light-gray2: #eeeeee;
-$color-gray: #575757;
 $color-green: #9aaf24;
 $color-light-green: #c9e23f;
-
+//フォント
 $font-set-01: 'Montserrat', sans-serif;
-
+//ブレイクポイント
 $breakpoint-md: 768px;
 
+
+/*
+共通
+*/
 //wrapper
 .wrapper {
     width: $wrapper-body-width;
@@ -26,12 +41,11 @@ $breakpoint-md: 768px;
         width: 100%;
     }
 }
-
-//共通
 body {
     color: $color-black;
     box-sizing: border-box;
 }
+//セクションタイトルv
 .section-title-wrap {
     display: flex;
     justify-content: center;
@@ -45,13 +59,17 @@ body {
         background-size:40px;
     }
 }
+//ハンバーガーメニュー開時の制御
 html.hidden,
 body.hidden {
     overflow: hidden;
     height: 100%;
 }
 
-//header
+
+/*
+header
+*/
 header {
     .site-logo {
         width: $header-logo-width;
@@ -69,6 +87,7 @@ header {
             right: 100px;
         }
     }
+    //グローバルナビゲーション
     .global-nav {
         padding: 40px 0 56px 0;
         .nav-list {
@@ -82,7 +101,6 @@ header {
                     a {
                         color: $color-green;
                     }
-                    
                 }
                 a {
                     display: block;
@@ -130,7 +148,9 @@ header {
                 right: 15px;
             }
         }
+        //スマホ画面のグローバルメニュー
         .global-nav {
+            padding: 0;
             .nav-list {
                 display: block;
                 position: absolute;
@@ -159,7 +179,10 @@ header {
     }
 }
 
-//news-area
+
+/*
+news-area
+*/
 .news-area {
     background-color: $color-light-gray;
     border: 1px solid $color-light-gray2;
@@ -218,6 +241,7 @@ header {
         .news-area-wrapper {
             width: 90%;
             padding: 44px 25px;
+            margin: 0;
             .news-list {
                 .news-item {
                     display: block;
@@ -243,11 +267,14 @@ header {
     }
 }
 
-//features-area
+
+/*
+features-area
+*/
 .features-area {
     margin-bottom: 124px;
     .section-title-wrap {
-        margin-top: 112px;
+        margin-top: 44px;
         .section-title {
             margin-bottom: 70px;      
         }
@@ -301,7 +328,10 @@ header {
     }
 }
 
-//subscription-area
+
+/*
+subscription-area
+*/
 .subscription-area {
     margin-bottom: 124px;
     .section-title-wrap {
@@ -361,7 +391,6 @@ header {
                     line-height: 50px;
                     background-color: #eee;
                     transition:background-color 3.0s;
-                    transition: all 0.5s ease-in;
                 }
                 &:hover {
                     transform: translate3d(0,5px, 0);
@@ -399,7 +428,10 @@ header {
     }
 }
 
-//items-area 
+
+/*
+items-area
+*/
 .items-area {
     margin-bottom: 460px;
     .section-title-wrap {
@@ -408,12 +440,12 @@ header {
     .items-list {
         display: flex;
         flex-wrap: wrap;
-        // vertical-align: bottom;
         .items-item {
             a {
                 .items-img {
                     width: $wrapper-body-width / 6;
                     transition: all 0.3s ease-in;
+                    //画像下1px空間を消す
                     vertical-align: bottom;
                     &:hover {
                         transition: all 0.5 ease-in;
@@ -443,7 +475,10 @@ header {
     }
 }
 
-//footer
+
+/*
+footer
+*/
 .footer {
     margin-bottom: 56px;
     text-align: center;

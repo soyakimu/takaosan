@@ -1,3 +1,16 @@
+@charset "UTF-8";
+/**
+* style.scss
+* TAKAOSANのスタイルシート
+* @author YUKIYA KIMURA
+* @version 1.0
+*/
+/*
+変数設定
+*/
+/*
+共通
+*/
 .wrapper {
   width: 1080px;
   margin: 0 auto; }
@@ -32,6 +45,9 @@ body.hidden {
   overflow: hidden;
   height: 100%; }
 
+/*
+header
+*/
 header .site-logo {
   width: 208px;
   padding: 36px 0; }
@@ -99,25 +115,30 @@ header .toggle-button {
       position: absolute;
       top: 26px;
       right: 15px; }
-    header .global-nav .nav-list {
-      display: block;
-      position: absolute;
-      top: 72px;
-      height: 100vh;
-      background-color: white;
-      display: none; }
-      header .global-nav .nav-list .nav-item {
-        border-bottom: 1px solid #eeeeee; }
-        header .global-nav .nav-list .nav-item a {
-          width: 100vw;
-          height: 45px;
-          line-height: 45px; }
-        header .global-nav .nav-list .nav-item:first-child {
-          border-top: 1px solid #eeeeee;
-          border-left: none; }
-          header .global-nav .nav-list .nav-item:first-child a {
-            color: #454545; } }
+    header .global-nav {
+      padding: 0; }
+      header .global-nav .nav-list {
+        display: block;
+        position: absolute;
+        top: 72px;
+        height: 100vh;
+        background-color: white;
+        display: none; }
+        header .global-nav .nav-list .nav-item {
+          border-bottom: 1px solid #eeeeee; }
+          header .global-nav .nav-list .nav-item a {
+            width: 100vw;
+            height: 45px;
+            line-height: 45px; }
+          header .global-nav .nav-list .nav-item:first-child {
+            border-top: 1px solid #eeeeee;
+            border-left: none; }
+            header .global-nav .nav-list .nav-item:first-child a {
+              color: #454545; } }
 
+/*
+news-area
+*/
 .news-area {
   background-color: #fafafa;
   border: 1px solid #eeeeee; }
@@ -163,7 +184,8 @@ header .toggle-button {
       display: none; }
     .news-area .news-area-wrapper {
       width: 90%;
-      padding: 44px 25px; }
+      padding: 44px 25px;
+      margin: 0; }
       .news-area .news-area-wrapper .news-list .news-item {
         display: block;
         width: 100%; }
@@ -181,10 +203,13 @@ header .toggle-button {
           width: none;
           word-wrap: break-word; } }
 
+/*
+features-area
+*/
 .features-area {
   margin-bottom: 124px; }
   .features-area .section-title-wrap {
-    margin-top: 112px; }
+    margin-top: 44px; }
     .features-area .section-title-wrap .section-title {
       margin-bottom: 70px; }
   .features-area .box-wrap {
@@ -224,6 +249,9 @@ header .toggle-button {
         text-align: justify;
         text-justify: inter-ideograph; } }
 
+/*
+subscription-area
+*/
 .subscription-area {
   margin-bottom: 124px; }
   .subscription-area .section-title-wrap {
@@ -286,10 +314,7 @@ header .toggle-button {
           background-color: #eee;
           -webkit-transition: background-color 3.0s;
           -o-transition: background-color 3.0s;
-          transition: background-color 3.0s;
-          -webkit-transition: all 0.5s ease-in;
-          -o-transition: all 0.5s ease-in;
-          transition: all 0.5s ease-in; }
+          transition: background-color 3.0s; }
         .subscription-area .card-list .card a:hover {
           -webkit-transform: translate3d(0, 5px, 0);
           transform: translate3d(0, 5px, 0); }
@@ -318,6 +343,9 @@ header .toggle-button {
         width: 100%;
         margin-bottom: 24px; } }
 
+/*
+items-area
+*/
 .items-area {
   margin-bottom: 460px; }
   .items-area .section-title-wrap {
@@ -349,6 +377,9 @@ header .toggle-button {
     .items-area .items-list .items-item a .items-img {
       width: 31.33333vw; } }
 
+/*
+footer
+*/
 .footer {
   margin-bottom: 56px;
   text-align: center; }
