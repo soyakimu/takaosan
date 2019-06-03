@@ -302,7 +302,7 @@ subscription-area
               margin-right: 8px; }
             .subscription-area .card-list .card a .card-content span:last-child {
               margin-left: 5px; }
-        .subscription-area .card-list .card a button {
+        .subscription-area .card-list .card a .card-btn {
           display: block;
           cursor: pointer;
           margin: 20px auto;
@@ -318,7 +318,7 @@ subscription-area
         .subscription-area .card-list .card a:hover {
           -webkit-transform: translate3d(0, 5px, 0);
           transform: translate3d(0, 5px, 0); }
-          .subscription-area .card-list .card a:hover button {
+          .subscription-area .card-list .card a:hover .card-btn {
             background: #c7e241;
             background: -webkit-gradient(linear, left top, right top, from(#c7e241), to(#47e3db));
             background: -webkit-linear-gradient(left, #c7e241 0%, #47e3db 100%);

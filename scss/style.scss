@@ -380,7 +380,7 @@ subscription-area
                         }
                     }
                 }
-                button {
+                .card-btn {
                     display: block; 
                     cursor: pointer;
                     margin: 20px auto;
@@ -394,7 +394,7 @@ subscription-area
                 }
                 &:hover {
                     transform: translate3d(0,5px, 0);
-                    button {
+                    .card-btn {
                         background: rgb(199,226,65);
                         background: linear-gradient(90deg, rgba(199,226,65,1) 0%, rgba(71,227,219,1) 100%);
                     }
