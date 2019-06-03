@@ -209,5 +209,14 @@
     </div><!-- .wrapper -->
 
 </body>
+<script>
+        $('.toggle-button').on('click', function() {
+            // console.log(11);
+            $('.global-nav .nav-list').slideToggle();
+            $('html').toggleClass('hidden');
+            $('body').toggleClass('hidden');
+            return false;
+        });
+</script>
 
 </html>

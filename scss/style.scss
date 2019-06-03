@@ -1,5 +1,6 @@
 //変数設定
 $wrapper-body-width: 1080px;
+$section-body-width-sm: 94vw;
 $section-body-margin-sm: 0 3%;
 $header-logo-width: 208px;
 $header-logo-sm-width: 187px;
@@ -41,6 +42,11 @@ body {
         background: url(../img/titlebar.png) no-repeat left top;
         background-size:40px;
     }
+}
+html.hidden,
+body.hidden {
+    overflow: hidden;
+    height: 100%;
 }
 //header
 header {
@@ -122,7 +128,33 @@ header {
             }
         }
         .global-nav {
-            display: none;
+            // position: absolute;
+            // z-index: 100;
+            .nav-list {
+                display: block;
+                position: absolute;
+                top: 72px;
+                height: 100vh;
+                background-color: white;
+                display: none;
+
+                .nav-item {
+                    border-bottom: 1px solid $color-light-gray2;
+                    // width: 100%;
+                    a {
+                        width: 100vw;
+                        height: 45px;
+                        line-height: 45px;
+                    }
+                    &:first-child {
+                        border-top: 1px solid $color-light-gray2;
+                        border-left: none;
+                        a {
+                            color: $color-black;
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -195,6 +227,7 @@ header {
                         width: 113px;
                         height: 26px;
                         line-height: 26px;
+                        margin-bottom: 10px;
                     }
                     a {
                         line-height: 28px;
@@ -206,7 +239,6 @@ header {
                     }
                 }
             }
-
         }
     }
 }
@@ -238,6 +270,32 @@ header {
                 line-height: 25.6px;
                 text-align: justify;
                 text-justify: inter-ideograph;
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-md) {
+    .features-area {
+        margin: $section-body-margin-sm;
+        margin-top: 44px;
+        margin-bottom: 109px;
+        .box-wrap {
+            display: block;
+            .box-img {
+                margin-right: 0px;
+                width: 100%;
+            }
+            .box-content {
+                .box-title {
+                    font-weight: 300;
+                    margin-top: 30px;
+                    margin-bottom: 48px;
+                }
+                .box-text {
+                    line-height: 25.6px;
+                    text-align: justify;
+                    text-justify: inter-ideograph;
+                }
             }
         }
     }
@@ -323,6 +381,22 @@ header {
         }
     }
 }
+@media (max-width: $breakpoint-md) {
+    .subscription-area {
+        margin: $section-body-margin-sm;
+        .section-description-wrap {
+            width: 100%;
+        }
+        .card-list {
+            display: block;
+            .card {
+                width: 100%;
+                margin-bottom: 24px;
+            }
+        }
+        
+    }
+}
 
 //items-area 
 .items-area {
@@ -337,11 +411,27 @@ header {
         .items-item {
             a {
                 .items-img {
+                    width: $wrapper-body-width / 6;
                     transition: all 0.3s ease-in;
                     vertical-align: bottom;
                     &:hover {
-                            transition: all 0.5 ease-in;
-                            opacity: 0.5;
+                        transition: all 0.5 ease-in;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: $breakpoint-md) {
+    .items-area {
+        margin: $section-body-margin-sm;
+        margin-bottom: 81px;
+        .items-list {
+            .items-item {
+                a {
+                    .items-img {
+                        width:$section-body-width-sm / 3;
                     }
                 }
             }
@@ -357,5 +447,10 @@ header {
         font-family: $font-set-01;
         font-size: 14px;
         color: $color-black;
+    }
+}
+@media (max-width: $breakpoint-md) {
+    .footer {   
+        margin-bottom: 157px;
     }
 }

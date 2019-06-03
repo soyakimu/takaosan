@@ -25,6 +25,11 @@ body {
     background: url(../img/titlebar.png) no-repeat left top;
     background-size: 40px; }
 
+html.hidden,
+body.hidden {
+  overflow: hidden;
+  height: 100%; }
+
 header .site-logo {
   width: 208px;
   padding: 36px 0; }
@@ -92,8 +97,24 @@ header .toggle-button {
       position: absolute;
       top: 26px;
       right: 15px; }
-    header .global-nav {
-      display: none; } }
+    header .global-nav .nav-list {
+      display: block;
+      position: absolute;
+      top: 72px;
+      height: 100vh;
+      background-color: white;
+      display: none; }
+      header .global-nav .nav-list .nav-item {
+        border-bottom: 1px solid #eeeeee; }
+        header .global-nav .nav-list .nav-item a {
+          width: 100vw;
+          height: 45px;
+          line-height: 45px; }
+        header .global-nav .nav-list .nav-item:first-child {
+          border-top: 1px solid #eeeeee;
+          border-left: none; }
+          header .global-nav .nav-list .nav-item:first-child a {
+            color: #454545; } }
 
 .news-area {
   background-color: #fafafa;
@@ -148,7 +169,8 @@ header .toggle-button {
           font-size: 12px;
           width: 113px;
           height: 26px;
-          line-height: 26px; }
+          line-height: 26px;
+          margin-bottom: 10px; }
         .news-area .news-area-wrapper .news-list .news-item a {
           line-height: 28px;
           color: #454545;
@@ -180,6 +202,25 @@ header .toggle-button {
         line-height: 25.6px;
         text-align: justify;
         text-justify: inter-ideograph; }
+
+@media (max-width: 768px) {
+  .features-area {
+    margin: 0 3%;
+    margin-top: 44px;
+    margin-bottom: 109px; }
+    .features-area .box-wrap {
+      display: block; }
+      .features-area .box-wrap .box-img {
+        margin-right: 0px;
+        width: 100%; }
+      .features-area .box-wrap .box-content .box-title {
+        font-weight: 300;
+        margin-top: 30px;
+        margin-bottom: 48px; }
+      .features-area .box-wrap .box-content .box-text {
+        line-height: 25.6px;
+        text-align: justify;
+        text-justify: inter-ideograph; } }
 
 .subscription-area {
   margin-bottom: 124px; }
@@ -258,6 +299,17 @@ header .toggle-button {
         -webkit-transform: translate3d(0, -5px, 0);
         transform: translate3d(0, -5px, 0); }
 
+@media (max-width: 768px) {
+  .subscription-area {
+    margin: 0 3%; }
+    .subscription-area .section-description-wrap {
+      width: 100%; }
+    .subscription-area .card-list {
+      display: block; }
+      .subscription-area .card-list .card {
+        width: 100%;
+        margin-bottom: 24px; } }
+
 .items-area {
   margin-bottom: 460px; }
   .items-area .section-title-wrap {
@@ -269,6 +321,7 @@ header .toggle-button {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
     .items-area .items-list .items-item a .items-img {
+      width: 180px;
       -webkit-transition: all 0.3s ease-in;
       -o-transition: all 0.3s ease-in;
       transition: all 0.3s ease-in;
@@ -279,6 +332,13 @@ header .toggle-button {
         transition: all 0.5 ease-in;
         opacity: 0.5; }
 
+@media (max-width: 768px) {
+  .items-area {
+    margin: 0 3%;
+    margin-bottom: 81px; }
+    .items-area .items-list .items-item a .items-img {
+      width: 31.33333vw; } }
+
 .footer {
   margin-bottom: 56px;
   text-align: center; }
@@ -286,3 +346,7 @@ header .toggle-button {
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     color: #454545; }
+
+@media (max-width: 768px) {
+  .footer {
+    margin-bottom: 157px; } }
