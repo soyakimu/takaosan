@@ -128,8 +128,6 @@ header {
             }
         }
         .global-nav {
-            // position: absolute;
-            // z-index: 100;
             .nav-list {
                 display: block;
                 position: absolute;
@@ -140,7 +138,6 @@ header {
 
                 .nav-item {
                     border-bottom: 1px solid $color-light-gray2;
-                    // width: 100%;
                     a {
                         width: 100vw;
                         height: 45px;
@@ -353,7 +350,7 @@ header {
                     }
                 }
                 button {
-                    display: block;
+                    display: block; 
                     cursor: pointer;
                     margin: 20px auto;
                     font-size: 16px;
@@ -384,8 +381,13 @@ header {
 @media (max-width: $breakpoint-md) {
     .subscription-area {
         margin: $section-body-margin-sm;
+        margin-bottom: 100px;
+        .section-title-wrap {
+            margin-bottom: 10px;
+        }
         .section-description-wrap {
             width: 100%;
+            margin-bottom: 40px;
         }
         .card-list {
             display: block;
@@ -427,6 +429,9 @@ header {
     .items-area {
         margin: $section-body-margin-sm;
         margin-bottom: 81px;
+        .section-title-wrap {
+            margin-bottom: 30px;
+        }
         .items-list {
             .items-item {
                 a {
