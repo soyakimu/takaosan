@@ -11,7 +11,7 @@
 /*
 パーツの読み込み
 */
-/*
+/**
 * _common.scss
 * 共通で使えるパーツ
 */
@@ -44,7 +44,7 @@ body {
     background: url(../img/titlebar.png) no-repeat left top;
     background-size: 40px; }
 
-/*
+/**
 * _header.scss
 * ヘッダーのパーツ
 */
@@ -141,7 +141,7 @@ header .toggle-button {
             header .global-nav .nav-list .nav-item:first-child a {
               color: #454545; } }
 
-/*
+/**
 * _footer.scss
 * フッターのパーツ
 */
