@@ -29,155 +29,15 @@ $breakpoint-md: 768px;
 
 
 /*
-共通
+パーツの読み込み
 */
-//wrapper
-.wrapper {
-    width: $wrapper-body-width;
-    margin: 0 auto;
-}
-@media (max-width: $breakpoint-md) {
-    .wrapper {
-        width: 100%;
-    }
-}
-body {
-    color: $color-black;
-    box-sizing: border-box;
-}
-//セクションタイトルv
-.section-title-wrap {
-    display: flex;
-    justify-content: center;
-    margin: 0 auto;
-    .section-title {
-        font-family: $font-set-01;
-        font-size: 24px;
-        line-height: 40px;
-        font-weight: bold;
-        background: url(../img/titlebar.png) no-repeat left top;
-        background-size:40px;
-    }
-}
-//ハンバーガーメニュー開時の制御
-html.hidden,
-body.hidden {
-    overflow: hidden;
-    height: 100%;
-}
+//共通パーツ
+@import "./common";
+//ヘッダーパーツ
+@import "./header";
+//フッターパーツ
+@import "./footer";
 
-
-/*
-header
-*/
-header {
-    .site-logo {
-        width: $header-logo-width;
-        padding: 36px 0;
-    }
-    .main-visual {
-        position: relative;
-        .main-visual-img {
-            width: 100%;
-        }
-        .catchcopy {
-            width: 242px;
-            position: absolute;
-            top: 50px;
-            right: 100px;
-        }
-    }
-    //グローバルナビゲーション
-    .global-nav {
-        padding: 40px 0 56px 0;
-        .nav-list {
-            display: flex;
-            justify-content: space-between;
-            .nav-item {
-                border-right: 2px solid $color-gray;
-                width: 100%;
-                &:first-child {
-                    border-left: 2px solid $color-gray;
-                    a {
-                        color: $color-green;
-                    }
-                }
-                a {
-                    display: block;
-                    color: $color-black;
-                    font-family: $font-set-01;
-                    font-weight: bold;
-                    line-height: 25px;
-                    width: 100%;
-                    text-align: center;
-                    text-decoration: none;
-                    transition: all 0.3s ease-in;
-                    &:hover {
-                        background-color: $color-light-gray;
-                        color: $color-green;
-                    }
-                }
-            }
-        }
-    }
-    .toggle-button {
-        display: none;
-    }
-}
-@media (max-width: $breakpoint-md) {
-    header {
-        margin-bottom: 66px;
-        .site-header-wrap {
-            position: relative;
-            .site-logo {
-                width: $header-logo-sm-width;
-                padding: 20px 0 22px 17px;
-            }
-            .toggle-button {
-                display: block;
-                position: absolute;
-                top: 20px;
-                right: 20px;
-            }
-        }
-        .main-visual {
-            .catchcopy {
-                width: 121px;
-                position: absolute;
-                top: 26px;
-                right: 15px;
-            }
-        }
-        //スマホ画面のグローバルメニュー
-        .global-nav {
-            padding: 0;
-            .nav-list {
-                display: block;
-                position: absolute;
-                top: 72px;
-                height: 100vh;
-                background-color: white;
-                display: none;
-
-                .nav-item {
-                    border-bottom: 1px solid $color-light-gray2;
-                    a {
-                        width: 100vw;
-                        height: 45px;
-                        line-height: 45px;
-                    }
-                    &:first-child {
-                        border-top: 1px solid $color-light-gray2;
-                        border-left: none;
-                        a {
-                            color: $color-black;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
 
 
 /*
@@ -346,6 +206,7 @@ subscription-area
         display: flex;
         justify-content: space-between;
         .card {
+            //カードボーダーによるズレの修正
             box-sizing: border-box;
             background-color: white;
             box-shadow: 0px 7px 20px rgba(0,0,0,0.15);
@@ -390,17 +251,17 @@ subscription-area
                     width: 296px;
                     line-height: 50px;
                     background-color: #eee;
-                    transition:background-color 3.0s;
                 }
                 &:hover {
-                    transform: translate3d(0,5px, 0);
                     .card-btn {
+                        //カードのホバー時にボタンを虹色に
                         background: rgb(199,226,65);
                         background: linear-gradient(90deg, rgba(199,226,65,1) 0%, rgba(71,227,219,1) 100%);
                     }
                 }
             }
             &:hover {
+                //ホバー時にカードを上に浮かせる
                 transform: translate3d(0,-5px, 0);
             }
         }
@@ -443,6 +304,7 @@ items-area
         .items-item {
             a {
                 .items-img {
+                    //６カラムの画像幅
                     width: $wrapper-body-width / 6;
                     transition: all 0.3s ease-in;
                     //画像下1px空間を消す
@@ -467,29 +329,11 @@ items-area
             .items-item {
                 a {
                     .items-img {
+                        //３カラムの画像幅
                         width:$section-body-width-sm / 3;
                     }
                 }
             }
         }
-    }
-}
-
-
-/*
-footer
-*/
-.footer {
-    margin-bottom: 56px;
-    text-align: center;
-    .footer-text {
-        font-family: $font-set-01;
-        font-size: 14px;
-        color: $color-black;
-    }
-}
-@media (max-width: $breakpoint-md) {
-    .footer {   
-        margin-bottom: 157px;
     }
 }

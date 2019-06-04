@@ -1,0 +1,20 @@
+/*
+* _footer.scss
+* フッターのパーツ
+*/
+
+
+.footer {
+    margin-bottom: 56px;
+    text-align: center;
+    .footer-text {
+        font-family: $font-set-01;
+        font-size: 14px;
+        color: $color-black;
+    }
+}
+@media (max-width: $breakpoint-md) {
+    .footer {   
+        margin-bottom: 157px;
+    }
+}

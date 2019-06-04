@@ -1,0 +1,36 @@
+/*
+* _common.scss
+* 共通で使えるパーツ
+*/
+
+
+//PCサイト全体の幅
+.wrapper {
+    width: $wrapper-body-width;
+    margin: 0 auto;
+}
+//SPサイト全体の幅
+@media (max-width: $breakpoint-md) {
+    .wrapper {
+        width: 100%;
+    }
+}
+//全体の調整
+body {
+    color: $color-black;
+    box-sizing: border-box;
+}
+//セクションタイトル
+.section-title-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    .section-title {
+        font-family: $font-set-01;
+        font-size: 24px;
+        line-height: 40px;
+        font-weight: bold;
+        background: url(../img/titlebar.png) no-repeat left top;
+        background-size:40px;
+    }
+}

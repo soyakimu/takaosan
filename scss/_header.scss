@@ -1,0 +1,120 @@
+/*
+* _header.scss
+* ヘッダーのパーツ
+*/
+
+//ハンバーガーメニュー開時の制御
+html.hidden,
+body.hidden {
+    overflow: hidden;
+    height: 100%;
+}
+
+header {
+    .site-logo {
+        width: $header-logo-width;
+        padding: 36px 0;
+    }
+    .main-visual {
+        position: relative;
+        .main-visual-img {
+            width: 100%;
+        }
+        .catchcopy {
+            width: 242px;
+            position: absolute;
+            top: 50px;
+            right: 100px;
+        }
+    }
+    //グローバルナビゲーション
+    .global-nav {
+        padding: 40px 0 56px 0;
+        .nav-list {
+            display: flex;
+            justify-content: space-between;
+            .nav-item {
+                border-right: 2px solid $color-gray;
+                width: 100%;
+                &:first-child {
+                    border-left: 2px solid $color-gray;
+                    a {
+                        color: $color-green;
+                    }
+                }
+                a {
+                    display: block;
+                    color: $color-black;
+                    font-family: $font-set-01;
+                    font-weight: bold;
+                    line-height: 25px;
+                    width: 100%;
+                    text-align: center;
+                    text-decoration: none;
+                    transition: all 0.3s ease-in;
+                    &:hover {
+                        background-color: $color-light-gray;
+                        color: $color-green;
+                    }
+                }
+            }
+        }
+    }
+    .toggle-button {
+        display: none;
+    }
+}
+@media (max-width: $breakpoint-md) {
+    header {
+        margin-bottom: 66px;
+        .site-header-wrap {
+            position: relative;
+            .site-logo {
+                width: $header-logo-sm-width;
+                padding: 20px 0 22px 17px;
+            }
+            .toggle-button {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+        }
+        .main-visual {
+            .catchcopy {
+                width: 121px;
+                position: absolute;
+                top: 26px;
+                right: 15px;
+            }
+        }
+        //スマホ画面のグローバルメニュー
+        .global-nav {
+            padding: 0;
+            .nav-list {
+                display: block;
+                position: absolute;
+                top: 72px;
+                height: 100vh;
+                background-color: white;
+                display: none;
+
+                .nav-item {
+                    border-bottom: 1px solid $color-light-gray2;
+                    a {
+                        width: 100vw;
+                        height: 45px;
+                        line-height: 45px;
+                    }
+                    &:first-child {
+                        border-top: 1px solid $color-light-gray2;
+                        border-left: none;
+                        a {
+                            color: $color-black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

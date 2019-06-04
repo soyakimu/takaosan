@@ -9,7 +9,11 @@
 変数設定
 */
 /*
-共通
+パーツの読み込み
+*/
+/*
+* _common.scss
+* 共通で使えるパーツ
 */
 .wrapper {
   width: 1080px;
@@ -40,14 +44,15 @@ body {
     background: url(../img/titlebar.png) no-repeat left top;
     background-size: 40px; }
 
+/*
+* _header.scss
+* ヘッダーのパーツ
+*/
 html.hidden,
 body.hidden {
   overflow: hidden;
   height: 100%; }
 
-/*
-header
-*/
 header .site-logo {
   width: 208px;
   padding: 36px 0; }
@@ -135,6 +140,22 @@ header .toggle-button {
             border-left: none; }
             header .global-nav .nav-list .nav-item:first-child a {
               color: #454545; } }
+
+/*
+* _footer.scss
+* フッターのパーツ
+*/
+.footer {
+  margin-bottom: 56px;
+  text-align: center; }
+  .footer .footer-text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #454545; }
+
+@media (max-width: 768px) {
+  .footer {
+    margin-bottom: 157px; } }
 
 /*
 news-area
@@ -311,19 +332,13 @@ subscription-area
           height: 50px;
           width: 296px;
           line-height: 50px;
-          background-color: #eee;
-          -webkit-transition: background-color 3.0s;
-          -o-transition: background-color 3.0s;
-          transition: background-color 3.0s; }
-        .subscription-area .card-list .card a:hover {
-          -webkit-transform: translate3d(0, 5px, 0);
-          transform: translate3d(0, 5px, 0); }
-          .subscription-area .card-list .card a:hover .card-btn {
-            background: #c7e241;
-            background: -webkit-gradient(linear, left top, right top, from(#c7e241), to(#47e3db));
-            background: -webkit-linear-gradient(left, #c7e241 0%, #47e3db 100%);
-            background: -o-linear-gradient(left, #c7e241 0%, #47e3db 100%);
-            background: linear-gradient(90deg, #c7e241 0%, #47e3db 100%); }
+          background-color: #eee; }
+        .subscription-area .card-list .card a:hover .card-btn {
+          background: #c7e241;
+          background: -webkit-gradient(linear, left top, right top, from(#c7e241), to(#47e3db));
+          background: -webkit-linear-gradient(left, #c7e241 0%, #47e3db 100%);
+          background: -o-linear-gradient(left, #c7e241 0%, #47e3db 100%);
+          background: linear-gradient(90deg, #c7e241 0%, #47e3db 100%); }
       .subscription-area .card-list .card:hover {
         -webkit-transform: translate3d(0, -5px, 0);
         transform: translate3d(0, -5px, 0); }
@@ -376,18 +391,3 @@ items-area
       margin-bottom: 30px; }
     .items-area .items-list .items-item a .items-img {
       width: 31.33333vw; } }
-
-/*
-footer
-*/
-.footer {
-  margin-bottom: 56px;
-  text-align: center; }
-  .footer .footer-text {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    color: #454545; }
-
-@media (max-width: 768px) {
-  .footer {
-    margin-bottom: 157px; } }
