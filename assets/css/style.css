@@ -3,7 +3,7 @@
 * style.scss
 * TAKAOSANのスタイルシート
 * @author YUKIYA KIMURA
-* @version 1.0
+* @version 1.1
 */
 /*
 変数設定
@@ -391,3 +391,56 @@ items-area
       margin-bottom: 30px; }
     .items-area .items-list .items-item a .items-img {
       width: 31.33333vw; } }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000;
+    color: #fff; }
+    body header .global-nav .nav-list .nav-item {
+      border-right: 2px solid white;
+      width: 100%; }
+      body header .global-nav .nav-list .nav-item:first-child {
+        border-left: 2px solid white; }
+        body header .global-nav .nav-list .nav-item:first-child a {
+          color: #9aaf24; }
+      body header .global-nav .nav-list .nav-item a {
+        color: white; }
+        body header .global-nav .nav-list .nav-item a:hover {
+          background-color: white;
+          color: #9aaf24; }
+    body .news-area {
+      background-color: #000;
+      color: #fff; }
+      body .news-area .news-area-wrapper .news-list .news-item span {
+        color: white; }
+      body .news-area .news-area-wrapper .news-list .news-item a {
+        color: white; }
+    body .subscription-area .card-list {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      body .subscription-area .card-list .card {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        background-color: black;
+        -webkit-box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.15);
+        border: 4px solid #c9e23f;
+        width: 344px;
+        -webkit-transition: all 0.2s ease-in;
+        -o-transition: all 0.2s ease-in;
+        transition: all 0.2s ease-in; }
+        body .subscription-area .card-list .card a {
+          color: white; }
+          body .subscription-area .card-list .card a .card-btn {
+            background-color: black;
+            border: 2px solid white; }
+          body .subscription-area .card-list .card a:hover .card-btn {
+            background: #c7e241;
+            background: -webkit-gradient(linear, left top, right top, from(#c7e241), to(#47e3db));
+            background: -webkit-linear-gradient(left, #c7e241 0%, #47e3db 100%);
+            background: -o-linear-gradient(left, #c7e241 0%, #47e3db 100%);
+            background: linear-gradient(90deg, #c7e241 0%, #47e3db 100%); } }
